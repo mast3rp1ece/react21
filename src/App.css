@@ -164,3 +164,12 @@ textarea::placeholder{
   transform: scale(0.95);
   box-shadow: 1px 1px 5px black;
 }
+.add-link {
+  color: crimson;
+  box-shadow: 0 0 5px crimson;
+  border-radius: 7px;
+  padding: 0 5px;
+}
+.add-link:hover {
+  box-shadow: 0 0 5px bisque;
+}
