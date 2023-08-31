@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react21/static/css/main.dc9a84c4.css",
-    "main.js": "/react21/static/js/main.dfe0f88d.js",
+    "main.css": "/react21/static/css/main.cc191e5f.css",
+    "main.js": "/react21/static/js/main.e06bb951.js",
     "static/js/787.771a2381.chunk.js": "/react21/static/js/787.771a2381.chunk.js",
     "static/media/me.jpg": "/react21/static/media/me.8401b3a5bf0e0e17d419.jpg",
     "static/media/mypost.jpg": "/react21/static/media/mypost.6a7ed04da6b12c08f832.jpg",
@@ -9,12 +9,12 @@
     "static/media/like.svg": "/react21/static/media/like.6b77b355ff122bc26839.svg",
     "static/media/comment.svg": "/react21/static/media/comment.2fada9ec66bf88293ee6.svg",
     "static/media/share.svg": "/react21/static/media/share.46910239b6dfe15ac58e.svg",
-    "main.dc9a84c4.css.map": "/react21/static/css/main.dc9a84c4.css.map",
-    "main.dfe0f88d.js.map": "/react21/static/js/main.dfe0f88d.js.map",
+    "main.cc191e5f.css.map": "/react21/static/css/main.cc191e5f.css.map",
+    "main.e06bb951.js.map": "/react21/static/js/main.e06bb951.js.map",
     "787.771a2381.chunk.js.map": "/react21/static/js/787.771a2381.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dc9a84c4.css",
-    "static/js/main.dfe0f88d.js"
+    "static/css/main.cc191e5f.css",
+    "static/js/main.e06bb951.js"
   ]
 }
