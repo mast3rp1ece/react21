@@ -167,3 +167,11 @@ textarea::placeholder{
 .add-link {
   color: crimson;
 }
+.count-button {
+  background: transparent;
+  color: #fff;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}

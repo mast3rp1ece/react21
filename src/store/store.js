@@ -10,6 +10,11 @@ const reducer = (state = initialState, action) => {
 			return {
 				...state, posts: [...state.posts, action.payload]
 			};
+		case 'UPDATE_POSTS' :
+			return {
+				...state,
+				posts: action.posts,
+			};
 		default:
 			return state;
 	}
