@@ -105,7 +105,7 @@ export const Posts = () => {
 						</div>
 				</div>
 			</div>
-			{posts.map((post, index) => (
+			{posts.map((posts, index) => (
 				<div className="posts-container" key={index}>
 					<div class="wrapper">
 						<div className="author-info">
@@ -117,9 +117,9 @@ export const Posts = () => {
 						<p>{posts.text}</p>
 						<img className="post-img" src={posts.image} alt="Post" />
 						<div className="actions">
-							<button onClick={() => handlePostCount(index, "like")} className="like count-button">{post.likes}</button>
-							<button onClick={() => handlePostCount(index, "comment")} className="comment count-button">{post.comments}</button>
-							<button onClick={() => handlePostCount(index, "share")} className="share count-button">{post.shares}</button>
+							<button onClick={() => handlePostCount(index, "like")} className="like count-button">{posts.likes}</button>
+							<button onClick={() => handlePostCount(index, "comment")} className="comment count-button">{posts.comments}</button>
+							<button onClick={() => handlePostCount(index, "share")} className="share count-button">{posts.shares}</button>
 						</div>
 					</div>
 				</div>
