@@ -9,6 +9,12 @@ a {
 a:hover {
   color: bisque;
 }
+button {
+  transition: all .1s ease-in;
+}
+button:hover {
+  transform: scale(1.1);
+}
 .header {
   background: rgb(19, 19, 19);
   padding: 20px 0;
@@ -27,6 +33,7 @@ a:hover {
 span {
   cursor: pointer;
 }
+
 .like::before {
   content: '';
   background: url(./components/img/like.svg) no-repeat;
@@ -44,7 +51,7 @@ span {
   width: 20px;
   height: 20px;
   position: relative;
-  top: 5px;
+  top: 6px;
   margin-right: 5px;
 }
 .share::before {
@@ -75,7 +82,7 @@ span {
 .wrapper {
   max-width: 1024px;
   width: 100%;
-  padding: 10px 20px;
+  padding: 20px 20px;
   margin: 0 auto;
   background: rgb(26, 26, 26);
   border-radius: 10px;
