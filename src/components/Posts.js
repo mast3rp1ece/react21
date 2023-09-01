@@ -10,25 +10,40 @@ export const Posts = () => {
 	const [likeCount, setLikeCount] = useState(42);
 	const [commentCount, setCommentCount] = useState(12);
 	const [shareCount, setShareCount] = useState(3);
-	const [lastAction, setLastAction] = useState('');
 	const initialButtonStates = posts.map(() => false);
 	const [likeButtonStates, setLikeButtonStates] = useState(initialButtonStates);
 	const [commentButtonStates, setCommentButtonStates] = useState(initialButtonStates);
 	const [shareButtonStates, setShareButtonStates] = useState(initialButtonStates);
-
-	const handleCount = () => {
-		if(lastAction === "increase") {
-			setLikeCount(likeCount - 1);
-			setCommentCount(commentCount - 1);
-			setShareCount(shareCount - 1);
-			setLastAction("decrease");
-		} else {
-			setLikeCount(likeCount + 1);
-			setCommentCount(commentCount + 1);
-			setShareCount(shareCount + 1);
-			setLastAction("increase");
+	const [likeButtonClicked, setLikeButtonClicked] = useState(false);
+	const [commentButtonClicked, setCommentButtonClicked] = useState(false);
+	const [shareButtonClicked, setShareButtonClicked] = useState(false);
+	const handleCount = (buttonType) => {
+		if (buttonType === "like") {
+		  if (!likeButtonClicked) {
+			 setLikeCount(likeCount + 1);
+			 setLikeButtonClicked(true);
+		  } else {
+			 setLikeCount(likeCount - 1);
+			 setLikeButtonClicked(false);
+		  }
+		} else if (buttonType === "comment") {
+		  if (!commentButtonClicked) {
+			 setCommentCount(commentCount + 1);
+			 setCommentButtonClicked(true);
+		  } else {
+			 setCommentCount(commentCount - 1);
+			 setCommentButtonClicked(false);
+		  }
+		} else if (buttonType === "share") {
+		  if (!shareButtonClicked) {
+			 setShareCount(shareCount + 1);
+			 setShareButtonClicked(true);
+		  } else {
+			 setShareCount(shareCount - 1);
+			 setShareButtonClicked(false);
+		  }
 		}
-	}
+	 };
 	const handlePostCount = (index, buttonType) => {
 		const updatePosts = [...posts];
 		const post = updatePosts[index];
@@ -84,9 +99,9 @@ export const Posts = () => {
 						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, commodi quidem est ipsam corrupti numquam quod harum nobis voluptate distinctio ipsa rem sed error vitae nisi, alias sunt. Nostrum, alias.</p>
 						<img className="post-img" src={mypost} alt="Post" />
 						<div className="actions">
-							<button onClick={handleCount} className="like count-button">{likeCount}</button>
-							<button onClick={handleCount} className="comment count-button">{commentCount}</button>
-							<button onClick={handleCount} className="share count-button">{shareCount}</button>
+							<button onClick={() => handleCount("like")} className="like count-button">{likeCount}</button>
+							<button onClick={() => handleCount("comment")} className="comment count-button">{commentCount}</button>
+							<button onClick={() => handleCount("share")} className="share count-button">{shareCount}</button>
 						</div>
 				</div>
 			</div>
